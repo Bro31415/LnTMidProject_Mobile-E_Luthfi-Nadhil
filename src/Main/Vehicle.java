@@ -1,8 +1,6 @@
 package Main;
 
-import java.util.Scanner;
-
-public class Vehicle {
+public abstract class Vehicle {
 
     public String brand;
     public String name;
@@ -11,64 +9,83 @@ public class Vehicle {
     public int gas;
     public int wheel;
     public String type;
-//    public int audiosys;
-//    public int helm;
+    public int audiosys, helm;
 
-
-    Scanner scan = new Scanner(System.in);
-
-    public void getBrand(){
-        brand = scan.nextLine();
-        if (brand.length() > 5){
-            System.out.println("Brand name is : " + brand);
-        }else{
-            System.out.println("Please enter a brand name with more than 5 characters!");
-        }
+    public String getBrand() {
+        return brand;
     }
 
-    public void getName() {
-        name = scan.nextLine();
-        if (name.length() > 5){
-            System.out.println("Model Name is : " + name);
-        }else{
-            System.out.println("Please enter a model name with more than 5 characters!");
-        }
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
-//    public void getLicensePlate() {
-//        licenseplate = scan.nextLine();
-//        String lp =
-//        if (licenseplate.matches("[A-Z] " + "[0-9]"+"[0-9]"+"[0-9]"+"[0-9]" + " [A-Z]"+"[A-Z]"+"[A-Z]")){
-//
-//        }else{
-//            System.out.println("Wrong license plate format");
-//        }
-//    }
-
-    public void getTopSpeed() {
-        speed = scan.nextInt();
-        if (speed > 100 || speed < 250){
-            System.out.println("Top speed is : " + speed);
-        }else{
-            System.out.println("Please enter a model name with more than 5 characters!");
-        }
+    public String getName() {
+        return name;
     }
 
-    public void getGasCapacity() {
-        gas = scan.nextInt();
-        if (gas > 30 || gas < 60){
-            System.out.println("Fuel tank capacity is : " + gas);
-        }else{
-            System.out.println("Please enter a model name with more than 5 characters!");
-        }
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void getWheels(){
-//        wheel = scan.nextInt();
+    public String getLicenseplate() {
+        return licenseplate;
     }
 
-    public void getType(){
+    public void setLicenseplate(String licenseplate) {
+        this.licenseplate = licenseplate;
     }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public int getGas() {
+        return gas;
+    }
+
+    public void setGas(int gas) {
+        this.gas = gas;
+    }
+
+    public int getWheel() {
+        return wheel;
+    }
+
+    public void setWheel(int wheel) {
+        this.wheel = wheel;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public int getAudiosys() {
+        return audiosys;
+    }
+
+    public void setAudiosys(int audiosys) {
+        this.audiosys = audiosys;
+    }
+
+    public int getHelm() {
+        return helm;
+    }
+
+    public void setHelm(int helm) {
+        this.helm = helm;
+    }
+
+
+
+
 
 
 }
